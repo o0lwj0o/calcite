@@ -48,7 +48,7 @@ public class GeodeSchemaFactory implements SchemaFactory {
       Map<String, Object> operand) {
     Map map = (Map) operand;
     String locatorHost = (String) map.get(LOCATOR_HOST);
-    int locatorPort = Integer.valueOf((String) map.get(LOCATOR_PORT));
+    int locatorPort = Integer.parseInt((String) map.get(LOCATOR_PORT));
     String[] regionNames = ((String) map.get(REGIONS)).split(COMMA_DELIMITER);
     String pbxSerializablePackagePath = (String) map.get(PDX_SERIALIZABLE_PACKAGE_PATH);
 
